@@ -6,7 +6,7 @@ function Navbar() {
     return(
         <div className="Navbar">
             <h1 className="Title">To Do List</h1>
-            <img src={logoBlue} alt="Logo da Blue EdTech" />
+            <img src={logoBlue} alt="Logo da Blue EdTech" width="120px" />
         </div>
     );
 }
