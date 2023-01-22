@@ -1,5 +1,5 @@
 import "./Home.css";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 
 function Home() {
 
