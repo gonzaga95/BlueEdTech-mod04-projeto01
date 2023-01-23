@@ -36,7 +36,7 @@ function ToDoList() {
     const completeTarefa = (id) => {
         let updatedTarefas = tarefas.map((todo) => {
             if (todo.id === id) {
-                todo.isComplete = !todo.isComplete;
+                todo.complete = !todo.complete;
             }
             return todo;
         });
