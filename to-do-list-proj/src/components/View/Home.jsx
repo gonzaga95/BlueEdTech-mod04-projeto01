@@ -1,6 +1,6 @@
 import "./Home.css";
 import Navbar from "../Navbar/Navbar";
-import ToDoForm from "../ToDoForm/ToDoForm";
+import ToDoList from "../ToDoList/ToDoList";
 
 function Home() {
     return (
@@ -9,7 +9,7 @@ function Home() {
                 <Navbar />
             </div>
             <div>
-                <ToDoForm />
+                <ToDoList />
             </div>
         </div>
     );
