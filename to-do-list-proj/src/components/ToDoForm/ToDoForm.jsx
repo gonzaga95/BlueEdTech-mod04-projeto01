@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function ToDoForm(props) {
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState(props.edit ? props.edit.value : "");
 
     const handleChange = (e) => {
         setInput(e.target.value);
@@ -20,14 +20,29 @@ function ToDoForm(props) {
 
     return (
         <form className="todo__form" onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={input}
-                name="text"
-                className="todo__input"
-                onChange={handleChange}
-            />
-            <button className="todo_button">Adicionar</button>
+            {props.edit ? (
+                <>
+                    <input
+                        type="text"
+                        value={input}
+                        name="text"
+                        className="todo__input"
+                        onChange={handleChange}
+                    />
+                    <button className="todo_button">Editar</button>
+                </>
+            ) : (
+                <>
+                    <input
+                        type="text"
+                        value={input}
+                        name="text"
+                        className="todo__input"
+                        onChange={handleChange}
+                    />
+                    <button className="todo_button">Adicionar</button>
+                </>
+            )}
         </form>
     );
 }
