@@ -1,11 +1,19 @@
-import React from 'react'
+import { useState } from "react";
 
 function ToDoForm() {
-  return (
-    <div>
-        
-    </div>
-  )
+    const [input, setInput] = useState("");
+
+    return (
+        <form className="todo__form">
+            <input
+                type="text"
+                value={input}
+                name="text"
+                className="todo__input"
+            />
+            <button className="todo_button">Adicionar</button>
+        </form>
+    );
 }
 
-export default ToDoForm
+export default ToDoForm;
